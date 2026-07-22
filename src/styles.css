@@ -122,9 +122,10 @@
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-serif);
-    font-weight: 500;
+    font-family: var(--font-sans);
+    font-weight: 700;
     letter-spacing: -0.01em;
+    text-transform: none;
   }
 
   html[dir="rtl"] h1,
@@ -132,8 +133,18 @@
   html[dir="rtl"] h3,
   html[dir="rtl"] h4 {
     font-family: var(--font-arabic);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0;
+  }
+
+  .font-display {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+  html[dir="rtl"] .font-display {
+    font-family: var(--font-arabic);
+    font-weight: 500;
   }
 
   ::selection {
