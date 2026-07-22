@@ -9,38 +9,240 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as OurStoryRouteImport } from './routes/our-story'
+import { Route as MenuRouteImport } from './routes/menu'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArIndexRouteImport } from './routes/ar.index'
+import { Route as ArPrivacyRouteImport } from './routes/ar.privacy'
+import { Route as ArOurStoryRouteImport } from './routes/ar.our-story'
+import { Route as ArMenuRouteImport } from './routes/ar.menu'
+import { Route as ArGalleryRouteImport } from './routes/ar.gallery'
+import { Route as ArContactRouteImport } from './routes/ar.contact'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OurStoryRoute = OurStoryRouteImport.update({
+  id: '/our-story',
+  path: '/our-story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MenuRoute = MenuRouteImport.update({
+  id: '/menu',
+  path: '/menu',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArIndexRoute = ArIndexRouteImport.update({
+  id: '/ar/',
+  path: '/ar/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArPrivacyRoute = ArPrivacyRouteImport.update({
+  id: '/ar/privacy',
+  path: '/ar/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArOurStoryRoute = ArOurStoryRouteImport.update({
+  id: '/ar/our-story',
+  path: '/ar/our-story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArMenuRoute = ArMenuRouteImport.update({
+  id: '/ar/menu',
+  path: '/ar/menu',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArGalleryRoute = ArGalleryRouteImport.update({
+  id: '/ar/gallery',
+  path: '/ar/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArContactRoute = ArContactRouteImport.update({
+  id: '/ar/contact',
+  path: '/ar/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/menu': typeof MenuRoute
+  '/our-story': typeof OurStoryRoute
+  '/privacy': typeof PrivacyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ar/contact': typeof ArContactRoute
+  '/ar/gallery': typeof ArGalleryRoute
+  '/ar/menu': typeof ArMenuRoute
+  '/ar/our-story': typeof ArOurStoryRoute
+  '/ar/privacy': typeof ArPrivacyRoute
+  '/ar/': typeof ArIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/menu': typeof MenuRoute
+  '/our-story': typeof OurStoryRoute
+  '/privacy': typeof PrivacyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ar/contact': typeof ArContactRoute
+  '/ar/gallery': typeof ArGalleryRoute
+  '/ar/menu': typeof ArMenuRoute
+  '/ar/our-story': typeof ArOurStoryRoute
+  '/ar/privacy': typeof ArPrivacyRoute
+  '/ar': typeof ArIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
+  '/menu': typeof MenuRoute
+  '/our-story': typeof OurStoryRoute
+  '/privacy': typeof PrivacyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/ar/contact': typeof ArContactRoute
+  '/ar/gallery': typeof ArGalleryRoute
+  '/ar/menu': typeof ArMenuRoute
+  '/ar/our-story': typeof ArOurStoryRoute
+  '/ar/privacy': typeof ArPrivacyRoute
+  '/ar/': typeof ArIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/gallery'
+    | '/menu'
+    | '/our-story'
+    | '/privacy'
+    | '/sitemap.xml'
+    | '/ar/contact'
+    | '/ar/gallery'
+    | '/ar/menu'
+    | '/ar/our-story'
+    | '/ar/privacy'
+    | '/ar/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/contact'
+    | '/gallery'
+    | '/menu'
+    | '/our-story'
+    | '/privacy'
+    | '/sitemap.xml'
+    | '/ar/contact'
+    | '/ar/gallery'
+    | '/ar/menu'
+    | '/ar/our-story'
+    | '/ar/privacy'
+    | '/ar'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/gallery'
+    | '/menu'
+    | '/our-story'
+    | '/privacy'
+    | '/sitemap.xml'
+    | '/ar/contact'
+    | '/ar/gallery'
+    | '/ar/menu'
+    | '/ar/our-story'
+    | '/ar/privacy'
+    | '/ar/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContactRoute: typeof ContactRoute
+  GalleryRoute: typeof GalleryRoute
+  MenuRoute: typeof MenuRoute
+  OurStoryRoute: typeof OurStoryRoute
+  PrivacyRoute: typeof PrivacyRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ArContactRoute: typeof ArContactRoute
+  ArGalleryRoute: typeof ArGalleryRoute
+  ArMenuRoute: typeof ArMenuRoute
+  ArOurStoryRoute: typeof ArOurStoryRoute
+  ArPrivacyRoute: typeof ArPrivacyRoute
+  ArIndexRoute: typeof ArIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/our-story': {
+      id: '/our-story'
+      path: '/our-story'
+      fullPath: '/our-story'
+      preLoaderRoute: typeof OurStoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/menu': {
+      id: '/menu'
+      path: '/menu'
+      fullPath: '/menu'
+      preLoaderRoute: typeof MenuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +250,65 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ar/': {
+      id: '/ar/'
+      path: '/ar'
+      fullPath: '/ar/'
+      preLoaderRoute: typeof ArIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/privacy': {
+      id: '/ar/privacy'
+      path: '/ar/privacy'
+      fullPath: '/ar/privacy'
+      preLoaderRoute: typeof ArPrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/our-story': {
+      id: '/ar/our-story'
+      path: '/ar/our-story'
+      fullPath: '/ar/our-story'
+      preLoaderRoute: typeof ArOurStoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/menu': {
+      id: '/ar/menu'
+      path: '/ar/menu'
+      fullPath: '/ar/menu'
+      preLoaderRoute: typeof ArMenuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/gallery': {
+      id: '/ar/gallery'
+      path: '/ar/gallery'
+      fullPath: '/ar/gallery'
+      preLoaderRoute: typeof ArGalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar/contact': {
+      id: '/ar/contact'
+      path: '/ar/contact'
+      fullPath: '/ar/contact'
+      preLoaderRoute: typeof ArContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContactRoute: ContactRoute,
+  GalleryRoute: GalleryRoute,
+  MenuRoute: MenuRoute,
+  OurStoryRoute: OurStoryRoute,
+  PrivacyRoute: PrivacyRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ArContactRoute: ArContactRoute,
+  ArGalleryRoute: ArGalleryRoute,
+  ArMenuRoute: ArMenuRoute,
+  ArOurStoryRoute: ArOurStoryRoute,
+  ArPrivacyRoute: ArPrivacyRoute,
+  ArIndexRoute: ArIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
