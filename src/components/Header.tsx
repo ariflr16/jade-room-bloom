@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { SITE, track } from "@/config/site";
 import { otherLangPath, useLang, t } from "@/lib/i18n";
+import { Logo } from "./Logo";
 import { ReserveButton } from "./ReserveButton";
 
 const NAV_EN = [
