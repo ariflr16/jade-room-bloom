@@ -1,24 +1,28 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { HomePage } from "@/components/pages/HomePage";
+import { RESTAURANT_JSONLD, WEBSITE_JSONLD } from "@/lib/schema";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: HomePage,
+  head: () => ({
+    meta: [
+      { title: "Jade Room | Modern Chinese Restaurant in Riyadh" },
+      { name: "description", content: "Discover modern Chinese dining at Jade Room in Al Malqa, Riyadh. Explore our menu, experience dishes made for sharing, and reserve your table online." },
+      { property: "og:title", content: "Jade Room | Modern Chinese Restaurant in Riyadh" },
+      { property: "og:description", content: "Modern Chinese dining in Al Malqa, Riyadh. Dishes made for sharing. Reserve online." },
+      { property: "og:url", content: "/" },
+      { property: "og:locale", content: "en" },
+      { property: "og:locale:alternate", content: "ar" },
+    ],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "alternate", hrefLang: "en", href: "/" },
+      { rel: "alternate", hrefLang: "ar", href: "/ar" },
+      { rel: "alternate", hrefLang: "x-default", href: "/" },
+    ],
+    scripts: [
+      { type: "application/ld+json", children: JSON.stringify(RESTAURANT_JSONLD) },
+      { type: "application/ld+json", children: JSON.stringify(WEBSITE_JSONLD) },
+    ],
+  }),
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
