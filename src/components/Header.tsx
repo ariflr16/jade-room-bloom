@@ -49,7 +49,7 @@ export function Header() {
       <div className="container-editorial flex items-center justify-between h-20">
         <Link
           to={homeLink}
-          className="h-9 md:h-10 group"
+          className="h-10 md:h-12 group"
           aria-label={SITE.name}
         >
           <Logo variant="dark" className="h-full w-auto" />
