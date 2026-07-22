@@ -49,15 +49,10 @@ export function Header() {
       <div className="container-editorial flex items-center justify-between h-20">
         <Link
           to={homeLink}
-          className="flex items-baseline gap-2 group"
+          className="h-9 md:h-10 group"
           aria-label={SITE.name}
         >
-          <span className="font-serif text-2xl md:text-[26px] tracking-tight text-foreground">
-            {lang === "ar" ? SITE.nameAr : "Jade"}
-          </span>
-          <span className="font-serif text-2xl md:text-[26px] italic text-jade">
-            {lang === "ar" ? "" : "Room"}
-          </span>
+          <Logo variant="dark" className="h-full w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9" aria-label={t(lang, "Primary", "التنقل الرئيسي")}>
