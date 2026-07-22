@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Instagram, MapPin, Phone } from "lucide-react";
 import { SITE, track } from "@/config/site";
 import { useLang, t } from "@/lib/i18n";
+import { Logo } from "./Logo";
 
 export function Footer() {
   const lang = useLang();
@@ -27,9 +28,8 @@ export function Footer() {
     <footer className="mt-24 bg-charcoal text-ivory">
       <div className="container-editorial py-16 grid gap-12 md:grid-cols-3">
         <div>
-          <div className="flex items-baseline gap-2">
-            <span className="font-serif text-3xl">{lang === "ar" ? SITE.nameAr : "Jade"}</span>
-            {lang === "en" && <span className="font-serif text-3xl italic text-brass">Room</span>}
+          <div className="h-12">
+            <Logo variant="light" className="h-full w-auto" />
           </div>
           <p className="mt-4 text-sm text-ivory/70 max-w-xs leading-relaxed">
             {t(
