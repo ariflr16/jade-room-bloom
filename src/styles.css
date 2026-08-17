@@ -159,9 +159,10 @@
 
 
   ::selection {
-    background: var(--jade);
-    color: var(--ivory);
+    background: var(--jade-sage);
+    color: var(--navy);
   }
+
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
