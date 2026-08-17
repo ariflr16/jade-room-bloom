@@ -40,7 +40,7 @@ export function GalleryPage() {
       <section className="pt-16 pb-8">
         <div className="container-editorial text-center max-w-2xl">
           <p className="eyebrow mb-5">{t(lang, "Gallery", "المعرض")}</p>
-          <h1 className="font-serif text-5xl md:text-6xl mb-4">
+          <h1 className="text-5xl md:text-6xl mb-4">
             {t(lang, "Inside Jade Room", "من داخل جايد روم")}
           </h1>
           <p className="text-muted-foreground leading-7">
@@ -95,7 +95,7 @@ export function GalleryPage() {
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-[100] bg-charcoal/95 flex items-center justify-center p-4"
+          className="fixed inset-0 z-[100] surface-jade grain/95 flex items-center justify-center p-4"
           onClick={() => setOpen(null)}
         >
           <button

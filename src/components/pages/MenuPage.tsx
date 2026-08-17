@@ -11,7 +11,7 @@ export function MenuPage() {
       <section className="pt-16 md:pt-24 pb-12">
         <div className="container-editorial text-center max-w-3xl">
           <p className="eyebrow mb-5">{t(lang, "The Menu", "القائمة")}</p>
-          <h1 className="font-serif text-5xl md:text-6xl mb-6">
+          <h1 className="text-5xl md:text-6xl mb-6">
             {t(lang, "A menu made for sharing", "قائمة مصمّمة للمشاركة")}
           </h1>
           <p className="text-muted-foreground text-lg leading-8">
@@ -47,7 +47,7 @@ export function MenuPage() {
           <section key={section.id} id={section.id} className="scroll-mt-40 py-10">
             <header className="mb-8">
               <div className="hairline w-16 mb-4" />
-              <h2 className="font-serif text-3xl md:text-4xl">
+              <h2 className="text-3xl md:text-4xl">
                 {t(lang, section.titleEn, section.titleAr)}
               </h2>
             </header>

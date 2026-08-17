@@ -32,7 +32,7 @@ export function ContactPage() {
       <section className="pt-16 pb-8">
         <div className="container-editorial text-center max-w-2xl">
           <p className="eyebrow mb-5">{t(lang, "Contact & Location", "التواصل والموقع")}</p>
-          <h1 className="font-serif text-5xl md:text-6xl mb-4">
+          <h1 className="text-5xl md:text-6xl mb-4">
             {t(lang, "Visit us in Al Malqa", "زوروا جايد روم في الملقا")}
           </h1>
           <p className="text-muted-foreground">
@@ -101,7 +101,7 @@ export function ContactPage() {
 
       <section className="container-editorial py-20 max-w-3xl">
         <p className="eyebrow mb-4">{t(lang, "FAQ", "الأسئلة الشائعة")}</p>
-        <h2 className="font-serif text-4xl md:text-5xl mb-10">
+        <h2 className="text-4xl md:text-5xl mb-10">
           {t(lang, "Frequently asked", "أسئلة يتكرّر طرحها")}
         </h2>
         <div className="divide-y divide-border">
