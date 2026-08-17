@@ -44,60 +44,62 @@
 }
 
 :root {
-  --radius: 4px;
+  --radius: 2px;
 
-  /* Brand palette — per Jade brand guidelines */
-  --navy: oklch(0.24 0.045 240);        /* #041C2B */
-  --jade-deep: oklch(0.28 0.032 155);   /* #182B21 */
-  --jade: oklch(0.28 0.032 155);        /* alias to deep for primary */
-  --jade-sage: oklch(0.68 0.062 130);   /* #90A371 */
-  --oxblood: oklch(0.44 0.165 27);      /* #941D14 */
-  --brass: oklch(0.52 0.10 68);         /* #995B0A */
-  --ivory: oklch(0.97 0.012 85);
-  --charcoal: oklch(0.20 0.01 60);
+  /* Brand palette — Jade Restaurant Brand Identity Guidelines ©2025 */
+  --navy: oklch(0.23 0.043 244);        /* #041C2B */
+  --jade-deep: oklch(0.29 0.031 156);   /* #182B21 */
+  --jade: oklch(0.29 0.031 156);
+  --jade-sage: oklch(0.69 0.062 124);   /* #90A371 */
+  --oxblood: oklch(0.44 0.163 29);      /* #941D14 */
+  --brass: oklch(0.53 0.109 65);        /* #995B0A */
+  --ivory: oklch(0.95 0.014 100);
+  --charcoal: oklch(0.18 0.02 220);
 
-  --background: oklch(0.97 0.012 85);
-  --foreground: oklch(0.20 0.01 60);
-  --card: oklch(0.985 0.008 85);
-  --card-foreground: oklch(0.20 0.01 60);
-  --popover: oklch(0.985 0.008 85);
-  --popover-foreground: oklch(0.20 0.01 60);
-  --primary: oklch(0.28 0.032 155);              /* jade-deep */
-  --primary-foreground: oklch(0.97 0.012 85);
-  --secondary: oklch(0.93 0.02 85);
-  --secondary-foreground: oklch(0.20 0.01 60);
-  --muted: oklch(0.93 0.015 85);
-  --muted-foreground: oklch(0.42 0.01 60);
-  --accent: oklch(0.52 0.10 68);                 /* brass */
-  --accent-foreground: oklch(0.97 0.012 85);
-  --destructive: oklch(0.44 0.165 27);           /* oxblood */
-  --destructive-foreground: oklch(0.97 0.012 85);
-  --border: oklch(0.88 0.015 85);
-  --input: oklch(0.88 0.015 85);
-  --ring: oklch(0.28 0.032 155);
+  /* Dark-first brand surface */
+  --background: oklch(0.23 0.043 244);            /* navy */
+  --foreground: oklch(0.95 0.014 100);            /* ivory */
+  --card: oklch(0.29 0.031 156);                  /* jade deep */
+  --card-foreground: oklch(0.95 0.014 100);
+  --popover: oklch(0.29 0.031 156);
+  --popover-foreground: oklch(0.95 0.014 100);
+  --primary: oklch(0.69 0.062 124);               /* sage */
+  --primary-foreground: oklch(0.23 0.043 244);
+  --secondary: oklch(0.29 0.031 156);             /* jade deep */
+  --secondary-foreground: oklch(0.95 0.014 100);
+  --muted: oklch(0.29 0.031 156);
+  --muted-foreground: oklch(0.79 0.028 110);
+  --accent: oklch(0.62 0.122 65);                 /* brass, lifted for dark bg */
+  --accent-foreground: oklch(0.23 0.043 244);
+  --destructive: oklch(0.52 0.18 29);             /* oxblood */
+  --destructive-foreground: oklch(0.95 0.014 100);
+  --border: oklch(0.69 0.062 124 / 22%);
+  --input: oklch(0.69 0.062 124 / 26%);
+  --ring: oklch(0.69 0.062 124);
 }
 
 .dark {
-  --background: oklch(0.24 0.045 240);           /* navy */
-  --foreground: oklch(0.97 0.012 85);
-  --card: oklch(0.28 0.032 155);
-  --card-foreground: oklch(0.97 0.012 85);
-  --popover: oklch(0.28 0.032 155);
-  --popover-foreground: oklch(0.97 0.012 85);
-  --primary: oklch(0.68 0.062 130);              /* sage jade */
-  --primary-foreground: oklch(0.24 0.045 240);
-  --secondary: oklch(0.28 0.032 155);
-  --secondary-foreground: oklch(0.97 0.012 85);
-  --muted: oklch(0.28 0.032 155);
-  --muted-foreground: oklch(0.78 0.02 85);
-  --accent: oklch(0.52 0.10 68);
-  --accent-foreground: oklch(0.97 0.012 85);
-  --destructive: oklch(0.55 0.18 27);
-  --destructive-foreground: oklch(0.97 0.012 85);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.68 0.062 130);
+  --background: oklch(0.23 0.043 244);
+  --foreground: oklch(0.95 0.014 100);
+  --card: oklch(0.29 0.031 156);
+  --card-foreground: oklch(0.95 0.014 100);
+  --popover: oklch(0.29 0.031 156);
+  --popover-foreground: oklch(0.95 0.014 100);
+  --primary: oklch(0.69 0.062 124);
+  --primary-foreground: oklch(0.23 0.043 244);
+  --secondary: oklch(0.29 0.031 156);
+  --secondary-foreground: oklch(0.95 0.014 100);
+  --muted: oklch(0.29 0.031 156);
+  --muted-foreground: oklch(0.79 0.028 110);
+  --accent: oklch(0.62 0.122 65);
+  --accent-foreground: oklch(0.23 0.043 244);
+  --destructive: oklch(0.52 0.18 29);
+  --destructive-foreground: oklch(0.95 0.014 100);
+  --border: oklch(0.69 0.062 124 / 22%);
+  --input: oklch(0.69 0.062 124 / 26%);
+  --ring: oklch(0.69 0.062 124);
 }
+
 
 @layer base {
   * {
