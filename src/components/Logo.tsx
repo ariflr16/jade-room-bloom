@@ -1,23 +1,23 @@
-import logoAsset from "@/assets/logo.png.asset.json";
+import sageLogo from "@/assets/logo-sage.png.asset.json";
+import jadeLogo from "@/assets/logo-jade.png.asset.json";
 import { SITE } from "@/config/site";
 import { useLang } from "@/lib/i18n";
 
 interface LogoProps {
+  /** "light" = sage logo for dark surfaces, "dark" = deep jade logo for light surfaces */
   variant?: "dark" | "light";
   className?: string;
 }
 
-export function Logo({ variant = "dark", className = "" }: LogoProps) {
+export function Logo({ variant = "light", className = "" }: LogoProps) {
   const lang = useLang();
   const alt = lang === "ar" ? SITE.nameAr : SITE.name;
 
   return (
     <img
-      src={logoAsset.url}
+      src={variant === "light" ? sageLogo.url : jadeLogo.url}
       alt={alt}
-      className={`h-full w-auto object-contain transition-opacity ${
-        variant === "light" ? "brightness-0 invert" : ""
-      } ${className}`}
+      className={`h-full w-auto object-contain ${className}`}
       loading="eager"
       decoding="async"
     />
