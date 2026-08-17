@@ -45,7 +45,7 @@ export function Header() {
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-background/92 backdrop-blur-md border-b border-border/60"
-          : "bg-transparent"
+          : "bg-gradient-to-b from-navy/70 to-transparent"
       }`}
     >
       <div className="container-editorial flex items-center justify-between h-20">
@@ -54,7 +54,7 @@ export function Header() {
           className="h-10 md:h-12 group"
           aria-label={SITE.name}
         >
-          <Logo variant={isLight ? "light" : "dark"} className="h-full w-auto" />
+          <Logo variant="light" className="h-full w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9" aria-label={t(lang, "Primary", "التنقل الرئيسي")}>
@@ -64,11 +64,9 @@ export function Header() {
               <Link
                 key={item.to}
                 to={item.to}
-                className={`text-[11px] uppercase tracking-[0.22em] transition-colors ${
-                  active
-                    ? isLight ? "text-brass" : "text-jade"
-                    : isLight ? "text-ivory/85 hover:text-brass" : "text-foreground/75 hover:text-jade"
-                } ${lang === "ar" ? "font-arabic normal-case tracking-normal text-sm" : ""}`}
+                className={`text-[11px] font-bold uppercase tracking-[0.22em] transition-colors ${
+                  active ? "text-jade-sage" : "text-ivory/70 hover:text-jade-sage"
+                } ${lang === "ar" ? "font-arabic normal-case tracking-normal text-sm font-normal" : ""}`}
               >
                 {item.label}
               </Link>
@@ -80,9 +78,7 @@ export function Header() {
           <Link
             to={otherLangPath(pathname)}
             onClick={() => track("language_switch", { to: lang === "ar" ? "en" : "ar" })}
-            className={`text-[11px] uppercase tracking-[0.2em] transition-colors ${
-              isLight ? "text-ivory/80 hover:text-brass" : "text-foreground/70 hover:text-jade"
-            }`}
+            className="text-[11px] font-bold uppercase tracking-[0.2em] text-ivory/70 hover:text-jade-sage transition-colors"
             aria-label={t(lang, "Switch to Arabic", "التحويل إلى الإنجليزية")}
           >
             {lang === "ar" ? "EN" : "عربي"}
@@ -96,9 +92,7 @@ export function Header() {
             />
           </div>
           <button
-            className={`lg:hidden p-2 -mr-2 transition-colors ${
-              isLight ? "text-ivory" : "text-foreground"
-            }`}
+            className="lg:hidden p-2 -mr-2 text-ivory transition-colors"
             onClick={() => setOpen((v) => !v)}
             aria-label={t(lang, "Toggle menu", "القائمة")}
             aria-expanded={open}
@@ -108,14 +102,15 @@ export function Header() {
         </div>
       </div>
 
+
       {open && (
-        <div className="lg:hidden bg-background border-t border-border">
+        <div className="lg:hidden surface-jade border-t border-border">
           <nav className="container-editorial py-6 flex flex-col gap-1">
             {nav.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
-                className={`py-3 text-lg ${lang === "ar" ? "font-arabic text-right" : "font-serif"} text-foreground hover:text-jade`}
+                className={`py-3 text-lg ${lang === "ar" ? "font-arabic text-right" : "font-serif"} text-ivory hover:text-jade-sage`}
               >
                 {item.label}
               </Link>
@@ -126,6 +121,7 @@ export function Header() {
           </nav>
         </div>
       )}
+
     </header>
   );
 }
