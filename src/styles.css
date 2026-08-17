@@ -143,15 +143,20 @@
     letter-spacing: 0;
   }
 
-  .font-display {
+  /* Secondary typeface: The Seasons (Italiana stand-in) — subheads & editorial copy */
+  .font-display,
+  .font-serif {
     font-family: var(--font-serif);
     font-weight: 400;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.015em;
+    text-transform: none;
   }
-  html[dir="rtl"] .font-display {
+  html[dir="rtl"] .font-display,
+  html[dir="rtl"] .font-serif {
     font-family: var(--font-arabic);
     font-weight: 500;
   }
+
 
   ::selection {
     background: var(--jade);
