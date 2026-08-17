@@ -61,7 +61,7 @@ export function GalleryPage() {
               onClick={() => setFilter(f.k as typeof filter)}
               className={`px-4 py-2 text-sm border transition ${
                 filter === f.k
-                  ? "bg-jade-deep text-ivory border-jade-deep"
+                  ? "bg-jade-sage text-navy border-jade-sage"
                   : "border-border text-foreground/70 hover:border-jade"
               }`}
             >

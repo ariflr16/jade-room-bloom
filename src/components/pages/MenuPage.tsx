@@ -33,7 +33,7 @@ export function MenuPage() {
           <ul className="flex gap-6 py-4 min-w-max text-sm">
             {MENU.map((s) => (
               <li key={s.id}>
-                <a href={`#${s.id}`} className="text-foreground/70 hover:text-jade whitespace-nowrap">
+                <a href={`#${s.id}`} className="text-foreground/70 hover:text-jade-sage whitespace-nowrap">
                   {t(lang, s.titleEn, s.titleAr)}
                 </a>
               </li>
@@ -65,7 +65,7 @@ export function MenuPage() {
                       </p>
                     )}
                   </div>
-                  <span className="font-serif italic text-jade whitespace-nowrap">{d.price ?? "—"}</span>
+                  <span className="font-serif italic text-jade-sage whitespace-nowrap">{d.price ?? "—"}</span>
                 </li>
               ))}
             </ul>

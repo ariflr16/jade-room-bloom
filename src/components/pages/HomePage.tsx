@@ -206,18 +206,18 @@ export function HomePage() {
 
             <div className="mt-6 space-y-3">
               <div className="flex items-center gap-3 text-foreground/80">
-                <Phone size={16} className="text-jade" />
+                <Phone size={16} className="text-jade-sage" />
                 <a href={SITE.phoneHref} onClick={() => track("phone_click", { source: "home_location" })}
-                  className="hover:text-jade">{SITE.phone}</a>
+                  className="hover:text-jade-sage">{SITE.phone}</a>
               </div>
               <div className="flex items-center gap-3 text-foreground/80">
-                <Instagram size={16} className="text-jade" />
+                <Instagram size={16} className="text-jade-sage" />
                 <a href={SITE.instagramUrl} target="_blank" rel="noopener noreferrer"
                   onClick={() => track("instagram_click", { source: "home_location" })}
-                  className="hover:text-jade">@jaderoom</a>
+                  className="hover:text-jade-sage">@jaderoom</a>
               </div>
               <div className="flex items-center gap-3 text-foreground/80">
-                <MapPin size={16} className="text-jade" />
+                <MapPin size={16} className="text-jade-sage" />
                 <span>{SITE.openingHours}</span>
               </div>
             </div>
