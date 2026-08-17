@@ -265,9 +265,9 @@ html[dir="rtl"] .btn-primary {
   background: transparent;
   color: currentColor;
   font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   border: 1px solid currentColor;
   transition: background 220ms ease, color 220ms ease;
@@ -281,8 +281,10 @@ html[dir="rtl"] .btn-outline {
 }
 .btn-outline:hover {
   background: currentColor;
-  color: var(--ivory);
+  color: var(--navy);
 }
 .on-dark.btn-outline:hover {
-  color: var(--charcoal);
+  color: var(--navy);
+}
+
 }
