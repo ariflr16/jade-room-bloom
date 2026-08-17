@@ -28,6 +28,8 @@ export function Header() {
   const homeLink = lang === "ar" ? "/ar" : "/";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const isHome = pathname === "/" || pathname === "/ar";
+  const isLight = !scrolled && isHome;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -52,7 +54,7 @@ export function Header() {
           className="h-10 md:h-12 group"
           aria-label={SITE.name}
         >
-          <Logo variant="dark" className="h-full w-auto" />
+          <Logo variant={isLight ? "light" : "dark"} className="h-full w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9" aria-label={t(lang, "Primary", "التنقل الرئيسي")}>
@@ -63,7 +65,9 @@ export function Header() {
                 key={item.to}
                 to={item.to}
                 className={`text-[11px] uppercase tracking-[0.22em] transition-colors ${
-                  active ? "text-jade" : "text-foreground/75 hover:text-jade"
+                  active
+                    ? isLight ? "text-brass" : "text-jade"
+                    : isLight ? "text-ivory/85 hover:text-brass" : "text-foreground/75 hover:text-jade"
                 } ${lang === "ar" ? "font-arabic normal-case tracking-normal text-sm" : ""}`}
               >
                 {item.label}
@@ -76,16 +80,25 @@ export function Header() {
           <Link
             to={otherLangPath(pathname)}
             onClick={() => track("language_switch", { to: lang === "ar" ? "en" : "ar" })}
-            className="text-[11px] uppercase tracking-[0.2em] text-foreground/70 hover:text-jade transition-colors"
+            className={`text-[11px] uppercase tracking-[0.2em] transition-colors ${
+              isLight ? "text-ivory/80 hover:text-brass" : "text-foreground/70 hover:text-jade"
+            }`}
             aria-label={t(lang, "Switch to Arabic", "التحويل إلى الإنجليزية")}
           >
             {lang === "ar" ? "EN" : "عربي"}
           </Link>
           <div className="hidden sm:block">
-            <ReserveButton lang={lang} source="header" />
+            <ReserveButton
+              lang={lang}
+              source="header"
+              variant={isLight ? "outline" : "primary"}
+              className={isLight ? "on-dark text-ivory" : ""}
+            />
           </div>
           <button
-            className="lg:hidden p-2 -mr-2 text-foreground"
+            className={`lg:hidden p-2 -mr-2 transition-colors ${
+              isLight ? "text-ivory" : "text-foreground"
+            }`}
             onClick={() => setOpen((v) => !v)}
             aria-label={t(lang, "Toggle menu", "القائمة")}
             aria-expanded={open}
