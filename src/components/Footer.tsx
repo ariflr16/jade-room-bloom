@@ -25,7 +25,7 @@ export function Footer() {
       ];
 
   return (
-    <footer className="mt-24 bg-charcoal text-ivory">
+    <footer className="mt-24 surface-jade grain text-ivory">
       <div className="container-editorial py-16 grid gap-12 md:grid-cols-3">
         <div>
           <div className="h-12">
@@ -53,14 +53,14 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => track("get_directions", { source: "footer" })}
-              className="inline-flex items-center gap-2 text-ivory/85 hover:text-brass"
+              className="inline-flex items-center gap-2 text-ivory/85 hover:text-jade-sage"
             >
               <MapPin size={14} /> {t(lang, "Get Directions", "الاتجاهات")}
             </a>
             <a
               href={SITE.phoneHref}
               onClick={() => track("phone_click", { source: "footer" })}
-              className="inline-flex items-center gap-2 text-ivory/85 hover:text-brass"
+              className="inline-flex items-center gap-2 text-ivory/85 hover:text-jade-sage"
             >
               <Phone size={14} /> {SITE.phone}
             </a>
@@ -69,7 +69,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => track("instagram_click", { source: "footer" })}
-              className="inline-flex items-center gap-2 text-ivory/85 hover:text-brass"
+              className="inline-flex items-center gap-2 text-ivory/85 hover:text-jade-sage"
             >
               <Instagram size={14} /> Instagram
             </a>
@@ -81,7 +81,7 @@ export function Footer() {
           <ul className="flex flex-col gap-2 text-sm">
             {links.map((l) => (
               <li key={l.to}>
-                <Link to={l.to} className="text-ivory/85 hover:text-brass transition-colors">
+                <Link to={l.to} className="text-ivory/85 hover:text-jade-sage transition-colors">
                   {l.label}
                 </Link>
               </li>

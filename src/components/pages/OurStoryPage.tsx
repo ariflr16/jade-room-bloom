@@ -12,7 +12,7 @@ export function OurStoryPage() {
       <section className="pt-20 pb-16">
         <div className="container-editorial max-w-3xl text-center">
           <p className="eyebrow mb-5">{t(lang, "Our Story", "قصتنا")}</p>
-          <h1 className="font-serif text-5xl md:text-7xl leading-[1.05]">
+          <h1 className="text-5xl md:text-7xl leading-[1.05]">
             {t(lang, "A modern voice for Chinese dining in Riyadh", "صوتٌ عصري للطعام الصيني في الرياض")}
           </h1>
         </div>
@@ -63,9 +63,9 @@ export function OurStoryPage() {
       <section className="relative py-24 my-8">
         <img src={storyImg} alt="" aria-hidden="true" loading="lazy"
           className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-charcoal/75" />
+        <div className="absolute inset-0 surface-jade grain/75" />
         <div className="relative container-editorial text-center text-ivory">
-          <h2 className="font-serif text-4xl md:text-5xl mb-8 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl mb-8 max-w-2xl mx-auto">
             {t(lang, "Join us at the table.", "انضمّوا إلينا حول الطاولة.")}
           </h2>
           <ReserveButton lang={lang} source="our_story_cta" />

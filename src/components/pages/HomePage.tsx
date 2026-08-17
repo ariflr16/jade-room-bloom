@@ -49,14 +49,14 @@ export function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/50 via-charcoal/30 to-charcoal/80" />
         <div className="relative z-10 h-full flex items-end pb-20 md:pb-28">
           <div className="container-editorial text-ivory">
-            <p className="eyebrow text-brass mb-6">
+            <p className="eyebrow text-jade-sage mb-6">
               {t(lang, "Al Malqa · Riyadh", "الملقا · الرياض")}
             </p>
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-[92px] leading-[0.95] max-w-4xl">
+            <h1 className="text-5xl md:text-7xl lg:text-[92px] leading-[0.95] max-w-4xl">
               {lang === "ar" ? (
-                <>الطعام الصيني العصري <em className="text-brass not-italic block">في الرياض</em></>
+                <>الطعام الصيني العصري <em className="text-jade-sage not-italic block">في الرياض</em></>
               ) : (
-                <>Modern Chinese <em className="text-brass italic block">Dining in Riyadh</em></>
+                <>Modern Chinese <em className="text-jade-sage italic block">Dining in Riyadh</em></>
               )}
             </h1>
             <p className={`mt-6 max-w-xl text-ivory/85 ${lang === "ar" ? "text-lg leading-8" : "text-base leading-7"}`}>
@@ -101,9 +101,9 @@ export function HomePage() {
           <div className="grid md:grid-cols-3 gap-12 md:gap-16">
             {pillars.map((p, i) => (
               <div key={i}>
-                <span className="font-serif italic text-brass text-lg">0{i + 1}</span>
+                <span className="font-serif italic text-jade-sage text-lg">0{i + 1}</span>
                 <div className="hairline w-12 my-4" />
-                <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-3">{p.title}</h3>
+                <h3 className="text-2xl md:text-3xl text-foreground mb-3">{p.title}</h3>
                 <p className="text-muted-foreground leading-7 text-[15px]">{p.body}</p>
               </div>
             ))}
@@ -116,7 +116,7 @@ export function HomePage() {
         <div className="container-editorial">
           <div className="max-w-2xl mb-12">
             <p className="eyebrow mb-4">{t(lang, "The Menu", "القائمة")}</p>
-            <h2 className="font-serif text-4xl md:text-5xl">
+            <h2 className="text-4xl md:text-5xl">
               {t(lang, "Dishes designed for the table", "أطباق مصمّمة للطاولة")}
             </h2>
           </div>
@@ -165,10 +165,10 @@ export function HomePage() {
       </section>
 
       {/* VISUAL STORY — magazine grid */}
-      <section className="py-20 bg-charcoal text-ivory">
+      <section className="py-20 surface-jade grain text-ivory">
         <div className="container-editorial">
           <p className="eyebrow mb-4">{t(lang, "A Visual Story", "حكاية بصرية")}</p>
-          <h2 className="font-serif text-4xl md:text-5xl max-w-2xl mb-14">
+          <h2 className="text-4xl md:text-5xl max-w-2xl mb-14">
             {t(lang, "Inside the Jade Room experience", "من داخل تجربة جايد روم")}
           </h2>
 
@@ -194,7 +194,7 @@ export function HomePage() {
         <div className="container-editorial grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <p className="eyebrow mb-4">{t(lang, "Find Us", "زوروا جايد روم")}</p>
-            <h2 className="font-serif text-4xl md:text-5xl mb-6">
+            <h2 className="text-4xl md:text-5xl mb-6">
               {t(lang, "In Al Malqa, at Sama Gallery", "في الملقا، سما جاليري")}
             </h2>
             <address className="not-italic text-foreground/85 leading-8 text-lg">
@@ -206,18 +206,18 @@ export function HomePage() {
 
             <div className="mt-6 space-y-3">
               <div className="flex items-center gap-3 text-foreground/80">
-                <Phone size={16} className="text-jade" />
+                <Phone size={16} className="text-jade-sage" />
                 <a href={SITE.phoneHref} onClick={() => track("phone_click", { source: "home_location" })}
-                  className="hover:text-jade">{SITE.phone}</a>
+                  className="hover:text-jade-sage">{SITE.phone}</a>
               </div>
               <div className="flex items-center gap-3 text-foreground/80">
-                <Instagram size={16} className="text-jade" />
+                <Instagram size={16} className="text-jade-sage" />
                 <a href={SITE.instagramUrl} target="_blank" rel="noopener noreferrer"
                   onClick={() => track("instagram_click", { source: "home_location" })}
-                  className="hover:text-jade">@jaderoom</a>
+                  className="hover:text-jade-sage">@jaderoom</a>
               </div>
               <div className="flex items-center gap-3 text-foreground/80">
-                <MapPin size={16} className="text-jade" />
+                <MapPin size={16} className="text-jade-sage" />
                 <span>{SITE.openingHours}</span>
               </div>
             </div>
@@ -252,10 +252,10 @@ export function HomePage() {
       <section className="relative py-32 overflow-hidden">
         <img src={storyImg} alt="" aria-hidden="true" loading="lazy"
           className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-charcoal/75" />
+        <div className="absolute inset-0 bg-jade-deep/75" />
         <div className="relative z-10 container-editorial text-center text-ivory">
-          <p className="eyebrow text-brass mb-6">{t(lang, "Reservations", "الحجوزات")}</p>
-          <h2 className="font-serif text-5xl md:text-7xl max-w-3xl mx-auto leading-tight">
+          <p className="eyebrow text-jade-sage mb-6">{t(lang, "Reservations", "الحجوزات")}</p>
+          <h2 className="text-5xl md:text-7xl max-w-3xl mx-auto leading-tight">
             {t(lang, "Your table at Jade Room awaits.", "طاولتكم في جايد روم بانتظاركم.")}
           </h2>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
@@ -263,7 +263,7 @@ export function HomePage() {
             <ReserveButton lang="ar" source="home_final_cta" variant="outline" className="on-dark text-ivory" />
           </div>
           <p className="mt-6 text-sm text-ivory/60">
-            <Link to={contactLink} className="underline underline-offset-4 hover:text-brass">
+            <Link to={contactLink} className="underline underline-offset-4 hover:text-jade-sage">
               {t(lang, "Or contact us directly", "أو تواصلوا معنا مباشرة")}
             </Link>
           </p>

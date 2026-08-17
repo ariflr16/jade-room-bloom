@@ -44,60 +44,62 @@
 }
 
 :root {
-  --radius: 4px;
+  --radius: 2px;
 
-  /* Brand palette — per Jade brand guidelines */
-  --navy: oklch(0.24 0.045 240);        /* #041C2B */
-  --jade-deep: oklch(0.28 0.032 155);   /* #182B21 */
-  --jade: oklch(0.28 0.032 155);        /* alias to deep for primary */
-  --jade-sage: oklch(0.68 0.062 130);   /* #90A371 */
-  --oxblood: oklch(0.44 0.165 27);      /* #941D14 */
-  --brass: oklch(0.52 0.10 68);         /* #995B0A */
-  --ivory: oklch(0.97 0.012 85);
-  --charcoal: oklch(0.20 0.01 60);
+  /* Brand palette — Jade Restaurant Brand Identity Guidelines ©2025 */
+  --navy: oklch(0.23 0.043 244);        /* #041C2B */
+  --jade-deep: oklch(0.29 0.031 156);   /* #182B21 */
+  --jade: oklch(0.29 0.031 156);
+  --jade-sage: oklch(0.69 0.062 124);   /* #90A371 */
+  --oxblood: oklch(0.44 0.163 29);      /* #941D14 */
+  --brass: oklch(0.53 0.109 65);        /* #995B0A */
+  --ivory: oklch(0.95 0.014 100);
+  --charcoal: oklch(0.18 0.02 220);
 
-  --background: oklch(0.97 0.012 85);
-  --foreground: oklch(0.20 0.01 60);
-  --card: oklch(0.985 0.008 85);
-  --card-foreground: oklch(0.20 0.01 60);
-  --popover: oklch(0.985 0.008 85);
-  --popover-foreground: oklch(0.20 0.01 60);
-  --primary: oklch(0.28 0.032 155);              /* jade-deep */
-  --primary-foreground: oklch(0.97 0.012 85);
-  --secondary: oklch(0.93 0.02 85);
-  --secondary-foreground: oklch(0.20 0.01 60);
-  --muted: oklch(0.93 0.015 85);
-  --muted-foreground: oklch(0.42 0.01 60);
-  --accent: oklch(0.52 0.10 68);                 /* brass */
-  --accent-foreground: oklch(0.97 0.012 85);
-  --destructive: oklch(0.44 0.165 27);           /* oxblood */
-  --destructive-foreground: oklch(0.97 0.012 85);
-  --border: oklch(0.88 0.015 85);
-  --input: oklch(0.88 0.015 85);
-  --ring: oklch(0.28 0.032 155);
+  /* Dark-first brand surface */
+  --background: oklch(0.23 0.043 244);            /* navy */
+  --foreground: oklch(0.95 0.014 100);            /* ivory */
+  --card: oklch(0.29 0.031 156);                  /* jade deep */
+  --card-foreground: oklch(0.95 0.014 100);
+  --popover: oklch(0.29 0.031 156);
+  --popover-foreground: oklch(0.95 0.014 100);
+  --primary: oklch(0.69 0.062 124);               /* sage */
+  --primary-foreground: oklch(0.23 0.043 244);
+  --secondary: oklch(0.29 0.031 156);             /* jade deep */
+  --secondary-foreground: oklch(0.95 0.014 100);
+  --muted: oklch(0.29 0.031 156);
+  --muted-foreground: oklch(0.79 0.028 110);
+  --accent: oklch(0.62 0.122 65);                 /* brass, lifted for dark bg */
+  --accent-foreground: oklch(0.23 0.043 244);
+  --destructive: oklch(0.52 0.18 29);             /* oxblood */
+  --destructive-foreground: oklch(0.95 0.014 100);
+  --border: oklch(0.69 0.062 124 / 22%);
+  --input: oklch(0.69 0.062 124 / 26%);
+  --ring: oklch(0.69 0.062 124);
 }
 
 .dark {
-  --background: oklch(0.24 0.045 240);           /* navy */
-  --foreground: oklch(0.97 0.012 85);
-  --card: oklch(0.28 0.032 155);
-  --card-foreground: oklch(0.97 0.012 85);
-  --popover: oklch(0.28 0.032 155);
-  --popover-foreground: oklch(0.97 0.012 85);
-  --primary: oklch(0.68 0.062 130);              /* sage jade */
-  --primary-foreground: oklch(0.24 0.045 240);
-  --secondary: oklch(0.28 0.032 155);
-  --secondary-foreground: oklch(0.97 0.012 85);
-  --muted: oklch(0.28 0.032 155);
-  --muted-foreground: oklch(0.78 0.02 85);
-  --accent: oklch(0.52 0.10 68);
-  --accent-foreground: oklch(0.97 0.012 85);
-  --destructive: oklch(0.55 0.18 27);
-  --destructive-foreground: oklch(0.97 0.012 85);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.68 0.062 130);
+  --background: oklch(0.23 0.043 244);
+  --foreground: oklch(0.95 0.014 100);
+  --card: oklch(0.29 0.031 156);
+  --card-foreground: oklch(0.95 0.014 100);
+  --popover: oklch(0.29 0.031 156);
+  --popover-foreground: oklch(0.95 0.014 100);
+  --primary: oklch(0.69 0.062 124);
+  --primary-foreground: oklch(0.23 0.043 244);
+  --secondary: oklch(0.29 0.031 156);
+  --secondary-foreground: oklch(0.95 0.014 100);
+  --muted: oklch(0.29 0.031 156);
+  --muted-foreground: oklch(0.79 0.028 110);
+  --accent: oklch(0.62 0.122 65);
+  --accent-foreground: oklch(0.23 0.043 244);
+  --destructive: oklch(0.52 0.18 29);
+  --destructive-foreground: oklch(0.95 0.014 100);
+  --border: oklch(0.69 0.062 124 / 22%);
+  --input: oklch(0.69 0.062 124 / 26%);
+  --ring: oklch(0.69 0.062 124);
 }
+
 
 @layer base {
   * {
@@ -112,7 +114,6 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
@@ -121,12 +122,17 @@
     font-family: var(--font-arabic);
   }
 
+  /* Primary typeface: Helvetica Bold — set in caps per brand layouts */
   h1, h2, h3, h4 {
     font-family: var(--font-sans);
     font-weight: 700;
-    letter-spacing: -0.01em;
-    text-transform: none;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+    line-height: 1.02;
   }
+
+
+
 
   html[dir="rtl"] h1,
   html[dir="rtl"] h2,
@@ -137,20 +143,26 @@
     letter-spacing: 0;
   }
 
-  .font-display {
+  /* Secondary typeface: The Seasons (Italiana stand-in) — subheads & editorial copy */
+  .font-display,
+  .font-serif {
     font-family: var(--font-serif);
     font-weight: 400;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.015em;
+    text-transform: none;
   }
-  html[dir="rtl"] .font-display {
+  html[dir="rtl"] .font-display,
+  html[dir="rtl"] .font-serif {
     font-family: var(--font-arabic);
     font-weight: 500;
   }
 
+
   ::selection {
-    background: var(--jade);
-    color: var(--ivory);
+    background: var(--jade-sage);
+    color: var(--navy);
   }
+
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -170,10 +182,10 @@
 @utility eyebrow {
   font-family: var(--font-sans);
   font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
+  font-weight: 700;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--brass);
+  color: var(--jade-sage);
 }
 
 html[dir="rtl"] .eyebrow {
@@ -183,8 +195,36 @@ html[dir="rtl"] .eyebrow {
 
 @utility hairline {
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--brass), transparent);
+  background: linear-gradient(to right, transparent, var(--jade-sage), transparent);
 }
+
+/* Grain overlay — photographic texture used across the brand layouts */
+@utility grain {
+  position: relative;
+  isolation: isolate;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.22;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+  }
+}
+
+/* Surfaces from the brand layout system */
+@utility surface-jade {
+  background-color: var(--jade-deep);
+  color: var(--ivory);
+}
+
+@utility surface-navy {
+  background-color: var(--navy);
+  color: var(--ivory);
+}
+
 
 @utility btn-primary {
   display: inline-flex;
@@ -192,15 +232,15 @@ html[dir="rtl"] .eyebrow {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.85rem 1.5rem;
-  background: var(--jade-deep);
-  color: var(--ivory);
+  background: var(--jade-sage);
+  color: var(--navy);
   font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  border: 1px solid var(--jade-deep);
-  transition: background 220ms ease, transform 220ms ease;
+  border: 1px solid var(--jade-sage);
+  transition: background 220ms ease, color 220ms ease;
   cursor: pointer;
 }
 html[dir="rtl"] .btn-primary {
@@ -210,8 +250,11 @@ html[dir="rtl"] .btn-primary {
   font-size: 0.95rem;
 }
 .btn-primary:hover {
-  background: var(--jade);
+  background: var(--brass);
+  border-color: var(--brass);
+  color: var(--ivory);
 }
+
 
 @utility btn-outline {
   display: inline-flex;
@@ -222,9 +265,9 @@ html[dir="rtl"] .btn-primary {
   background: transparent;
   color: currentColor;
   font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   border: 1px solid currentColor;
   transition: background 220ms ease, color 220ms ease;
@@ -238,8 +281,8 @@ html[dir="rtl"] .btn-outline {
 }
 .btn-outline:hover {
   background: currentColor;
-  color: var(--ivory);
+  color: var(--navy);
 }
 .on-dark.btn-outline:hover {
-  color: var(--charcoal);
+  color: var(--navy);
 }

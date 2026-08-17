@@ -32,7 +32,7 @@ export function ContactPage() {
       <section className="pt-16 pb-8">
         <div className="container-editorial text-center max-w-2xl">
           <p className="eyebrow mb-5">{t(lang, "Contact & Location", "التواصل والموقع")}</p>
-          <h1 className="font-serif text-5xl md:text-6xl mb-4">
+          <h1 className="text-5xl md:text-6xl mb-4">
             {t(lang, "Visit us in Al Malqa", "زوروا جايد روم في الملقا")}
           </h1>
           <p className="text-muted-foreground">
@@ -55,18 +55,18 @@ export function ContactPage() {
 
           <div className="space-y-3">
             <div className="flex items-center gap-3">
-              <Phone size={16} className="text-jade" />
+              <Phone size={16} className="text-jade-sage" />
               <a href={SITE.phoneHref} onClick={() => track("phone_click", { source: "contact" })}
-                className="hover:text-jade">{SITE.phone}</a>
+                className="hover:text-jade-sage">{SITE.phone}</a>
             </div>
             <div className="flex items-center gap-3">
-              <Instagram size={16} className="text-jade" />
+              <Instagram size={16} className="text-jade-sage" />
               <a href={SITE.instagramUrl} target="_blank" rel="noopener noreferrer"
                 onClick={() => track("instagram_click", { source: "contact" })}
-                className="hover:text-jade">@jaderoom</a>
+                className="hover:text-jade-sage">@jaderoom</a>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin size={16} className="text-jade" />
+              <MapPin size={16} className="text-jade-sage" />
               <span>{SITE.openingHours}</span>
             </div>
           </div>
@@ -101,7 +101,7 @@ export function ContactPage() {
 
       <section className="container-editorial py-20 max-w-3xl">
         <p className="eyebrow mb-4">{t(lang, "FAQ", "الأسئلة الشائعة")}</p>
-        <h2 className="font-serif text-4xl md:text-5xl mb-10">
+        <h2 className="text-4xl md:text-5xl mb-10">
           {t(lang, "Frequently asked", "أسئلة يتكرّر طرحها")}
         </h2>
         <div className="divide-y divide-border">
@@ -109,7 +109,7 @@ export function ContactPage() {
             <details key={i} className="group py-5">
               <summary className="cursor-pointer list-none flex justify-between items-center gap-4">
                 <span className="font-serif text-xl text-foreground">{f.q}</span>
-                <span className="text-jade text-2xl group-open:rotate-45 transition-transform">+</span>
+                <span className="text-jade-sage text-2xl group-open:rotate-45 transition-transform">+</span>
               </summary>
               <p className="mt-3 text-muted-foreground leading-7">{f.a}</p>
             </details>

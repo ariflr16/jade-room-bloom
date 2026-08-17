@@ -7,7 +7,7 @@ export function PrivacyPage() {
     <PageShell>
       <section className="container-editorial py-20 max-w-3xl">
         <p className="eyebrow mb-4">{t(lang, "Legal", "قانوني")}</p>
-        <h1 className="font-serif text-5xl mb-8">{t(lang, "Privacy Policy", "سياسة الخصوصية")}</h1>
+        <h1 className="text-5xl mb-8">{t(lang, "Privacy Policy", "سياسة الخصوصية")}</h1>
         <div className="space-y-6 text-foreground/85 leading-7">
           <p>
             {t(
@@ -16,7 +16,7 @@ export function PrivacyPage() {
               "يُدار هذا الموقع من قِبل مطعم جايد روم في الرياض. نحترم خصوصيتكم ونلتزم بحماية بياناتكم الشخصية."
             )}
           </p>
-          <h2 className="font-serif text-2xl">{t(lang, "Information we collect", "المعلومات التي نجمعها")}</h2>
+          <h2 className="text-2xl">{t(lang, "Information we collect", "المعلومات التي نجمعها")}</h2>
           <p>
             {t(
               lang,
@@ -24,7 +24,7 @@ export function PrivacyPage() {
               "عند إجراء حجز عبر شريكنا SevenRooms أو التواصل معنا مباشرة، نجمع اسمكم وبيانات التواصل وتفضيلات الحجز."
             )}
           </p>
-          <h2 className="font-serif text-2xl">{t(lang, "How we use it", "كيف نستخدمها")}</h2>
+          <h2 className="text-2xl">{t(lang, "How we use it", "كيف نستخدمها")}</h2>
           <p>
             {t(
               lang,
@@ -32,7 +32,7 @@ export function PrivacyPage() {
               "نستخدم بياناتكم فقط لإدارة الحجوزات، والتواصل بشأن زيارتكم، وتحسين تجربة الضيافة."
             )}
           </p>
-          <h2 className="font-serif text-2xl">{t(lang, "Analytics", "تحليلات الاستخدام")}</h2>
+          <h2 className="text-2xl">{t(lang, "Analytics", "تحليلات الاستخدام")}</h2>
           <p>
             {t(
               lang,
@@ -40,7 +40,7 @@ export function PrivacyPage() {
               "نستخدم أدوات تحليلية تحترم الخصوصية لفهم كيفية استخدام الموقع، دون مشاركة بيانات شخصية مع أطراف خارجية لأغراض إعلانية."
             )}
           </p>
-          <h2 className="font-serif text-2xl">{t(lang, "Contact", "التواصل")}</h2>
+          <h2 className="text-2xl">{t(lang, "Contact", "التواصل")}</h2>
           <p>
             {t(
               lang,
