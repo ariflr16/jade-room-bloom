@@ -252,7 +252,7 @@ export function HomePage() {
       <section className="relative py-32 overflow-hidden">
         <img src={storyImg} alt="" aria-hidden="true" loading="lazy"
           className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 surface-jade grain/75" />
+        <div className="absolute inset-0 bg-jade-deep/75" />
         <div className="relative z-10 container-editorial text-center text-ivory">
           <p className="eyebrow text-jade-sage mb-6">{t(lang, "Reservations", "الحجوزات")}</p>
           <h2 className="text-5xl md:text-7xl max-w-3xl mx-auto leading-tight">
