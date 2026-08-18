@@ -141,7 +141,22 @@
     font-family: var(--font-arabic);
     font-weight: 700;
     letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: none;
+    word-spacing: 0.05em;
   }
+
+  /* Arabic runs visually larger than Latin at the same px — scale headings down */
+  html[dir="rtl"] h1 { font-size: 0.72em; }
+  html[dir="rtl"] h2 { font-size: 0.78em; }
+  html[dir="rtl"] h3 { font-size: 0.9em; }
+
+  html[dir="rtl"] p,
+  html[dir="rtl"] li,
+  html[dir="rtl"] address {
+    line-height: 2;
+  }
+
 
   /* Secondary typeface: The Seasons (Italiana stand-in) — subheads & editorial copy */
   .font-display,
