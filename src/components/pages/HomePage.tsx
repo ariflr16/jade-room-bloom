@@ -9,7 +9,6 @@ import storyImg from "@/assets/story.jpg";
 import interiorImg from "@/assets/interior.jpg";
 import dimsumImg from "@/assets/dimsum.jpg";
 import beefImg from "@/assets/beef.jpg";
-import seafoodImg from "@/assets/seafood.jpg";
 import mocktailImg from "@/assets/mocktail.jpg";
 import sharingImg from "@/assets/sharing.jpg";
 
@@ -133,7 +132,7 @@ export function HomePage() {
             {[
               { img: dimsumImg, en: "Dim Sum", ar: "ديم سم" },
               { img: beefImg, en: "Wok Beef", ar: "لحم الووك" },
-              { img: seafoodImg, en: "Seafood", ar: "المأكولات البحرية" },
+              { img: mocktailImg, en: "Mocktails", ar: "الموكتيلز" },
             ].map((d) => (
               <figure key={d.en} className="group">
                 <div className="aspect-[4/5] overflow-hidden bg-muted">
