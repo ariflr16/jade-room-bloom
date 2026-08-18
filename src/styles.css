@@ -252,7 +252,7 @@ html[dir="rtl"] .btn-primary {
 .btn-primary:hover {
   background: var(--brass);
   border-color: var(--brass);
-  color: var(--ivory);
+  color: var(--navy);
 }
 
 
