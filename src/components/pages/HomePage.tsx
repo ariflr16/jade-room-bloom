@@ -9,7 +9,6 @@ import storyImg from "@/assets/story.jpg";
 import interiorImg from "@/assets/interior.jpg";
 import dimsumImg from "@/assets/dimsum.jpg";
 import beefImg from "@/assets/beef.jpg";
-import seafoodImg from "@/assets/seafood.jpg";
 import mocktailImg from "@/assets/mocktail.jpg";
 import sharingImg from "@/assets/sharing.jpg";
 
@@ -52,20 +51,30 @@ export function HomePage() {
             <p className="eyebrow text-jade-sage mb-6">
               {t(lang, "Al Malqa · Riyadh", "الملقا · الرياض")}
             </p>
-            <h1 className="text-5xl md:text-7xl lg:text-[92px] leading-[0.95] max-w-4xl">
+            <h1
+              className={
+                lang === "ar"
+                  ? "text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.35] max-w-3xl"
+                  : "text-4xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[1.02] max-w-4xl"
+              }
+            >
               {lang === "ar" ? (
-                <>الطعام الصيني العصري <em className="text-jade-sage not-italic block">في الرياض</em></>
+                <>
+                  <span className="block">الطعام الصيني العصري</span>
+                  <em className="text-jade-sage not-italic block">في الرياض</em>
+                </>
               ) : (
                 <>Modern Chinese <em className="text-jade-sage italic block">Dining in Riyadh</em></>
               )}
             </h1>
-            <p className={`mt-6 max-w-xl text-ivory/85 ${lang === "ar" ? "text-lg leading-8" : "text-base leading-7"}`}>
+            <p className={`mt-6 max-w-xl text-ivory/85 ${lang === "ar" ? "text-base leading-9" : "text-base leading-7"}`}>
               {t(
                 lang,
                 "An elevated Chinese dining experience where expressive flavours, refined hospitality and dishes made for sharing come together in the heart of Al Malqa.",
                 "تجربة طعام صيني راقية تجمع بين النكهات المميزة والضيافة الأنيقة والأطباق المُعدّة للمشاركة، في قلب حي الملقا."
               )}
             </p>
+
             <div className="mt-9 flex flex-wrap gap-3">
               <ReserveButton lang={lang} source="hero" />
               <Link
@@ -133,7 +142,7 @@ export function HomePage() {
             {[
               { img: dimsumImg, en: "Dim Sum", ar: "ديم سم" },
               { img: beefImg, en: "Wok Beef", ar: "لحم الووك" },
-              { img: seafoodImg, en: "Seafood", ar: "المأكولات البحرية" },
+              { img: mocktailImg, en: "Mocktails", ar: "الموكتيلز" },
             ].map((d) => (
               <figure key={d.en} className="group">
                 <div className="aspect-[4/5] overflow-hidden bg-muted">

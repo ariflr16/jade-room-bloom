@@ -7,7 +7,6 @@ import storyImg from "@/assets/story.jpg";
 import interiorImg from "@/assets/interior.jpg";
 import dimsumImg from "@/assets/dimsum.jpg";
 import beefImg from "@/assets/beef.jpg";
-import seafoodImg from "@/assets/seafood.jpg";
 import mocktailImg from "@/assets/mocktail.jpg";
 import sharingImg from "@/assets/sharing.jpg";
 
@@ -17,7 +16,6 @@ const ITEMS: GalleryItem[] = [
   { src: heroImg, category: "food", alt: { en: "Signature dim sum arrangement at Jade Room Riyadh", ar: "تشكيلة ديم سم مميزة في جايد روم الرياض" } },
   { src: dimsumImg, category: "food", alt: { en: "Steamed dumplings in bamboo basket", ar: "دمبلينغ مطبوخ بالبخار في سلة بامبو" } },
   { src: beefImg, category: "food", alt: { en: "Wok-fired beef on jade ceramic", ar: "لحم الووك على طبق جايد" } },
-  { src: seafoodImg, category: "food", alt: { en: "Steamed whole sea bass", ar: "سمك القاروص المطبوخ بالبخار" } },
   { src: mocktailImg, category: "food", alt: { en: "Jade Garden mocktail", ar: "موكتيل حديقة جايد" } },
   { src: interiorImg, category: "interior", alt: { en: "Jade Room dining room, Al Malqa Riyadh", ar: "قاعة الطعام في جايد روم، الملقا الرياض" } },
   { src: storyImg, category: "experience", alt: { en: "Shared dishes at Jade Room", ar: "أطباق المشاركة في جايد روم" } },
