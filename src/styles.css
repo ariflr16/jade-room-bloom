@@ -46,36 +46,36 @@
 :root {
   --radius: 2px;
 
-  /* Brand palette — Jade Restaurant Brand Identity Guidelines ©2025 */
-  --navy: oklch(0.23 0.043 244);        /* #041C2B */
-  --jade-deep: oklch(0.29 0.031 156);   /* #182B21 */
-  --jade: oklch(0.29 0.031 156);
-  --jade-sage: oklch(0.69 0.062 124);   /* #90A371 */
-  --oxblood: oklch(0.44 0.163 29);      /* #941D14 */
-  --brass: oklch(0.53 0.109 65);        /* #995B0A */
-  --ivory: oklch(0.95 0.014 100);
-  --charcoal: oklch(0.18 0.02 220);
+  /* Single-hue jade system — one colour family, sage as the only accent */
+  --navy: oklch(0.19 0.024 158);        /* deepest jade ink (base surface) */
+  --jade-deep: oklch(0.26 0.030 156);   /* raised jade surface */
+  --jade: oklch(0.26 0.030 156);
+  --jade-sage: oklch(0.72 0.060 124);   /* #90A371 lifted — the accent */
+  --oxblood: oklch(0.44 0.163 29);      /* reserved for errors only */
+  --brass: oklch(0.82 0.052 122);       /* light sage — hover state only */
+  --ivory: oklch(0.95 0.012 110);
+  --charcoal: oklch(0.16 0.020 158);
 
-  /* Dark-first brand surface */
-  --background: oklch(0.23 0.043 244);            /* navy */
-  --foreground: oklch(0.95 0.014 100);            /* ivory */
-  --card: oklch(0.29 0.031 156);                  /* jade deep */
-  --card-foreground: oklch(0.95 0.014 100);
-  --popover: oklch(0.29 0.031 156);
-  --popover-foreground: oklch(0.95 0.014 100);
-  --primary: oklch(0.69 0.062 124);               /* sage */
-  --primary-foreground: oklch(0.23 0.043 244);
-  --secondary: oklch(0.29 0.031 156);             /* jade deep */
-  --secondary-foreground: oklch(0.95 0.014 100);
-  --muted: oklch(0.29 0.031 156);
-  --muted-foreground: oklch(0.79 0.028 110);
-  --accent: oklch(0.62 0.122 65);                 /* brass, lifted for dark bg */
-  --accent-foreground: oklch(0.23 0.043 244);
-  --destructive: oklch(0.52 0.18 29);             /* oxblood */
-  --destructive-foreground: oklch(0.95 0.014 100);
-  --border: oklch(0.69 0.062 124 / 22%);
-  --input: oklch(0.69 0.062 124 / 26%);
-  --ring: oklch(0.69 0.062 124);
+  /* Dark-first, monochrome jade surface ladder */
+  --background: oklch(0.19 0.024 158);
+  --foreground: oklch(0.95 0.012 110);
+  --card: oklch(0.26 0.030 156);
+  --card-foreground: oklch(0.95 0.012 110);
+  --popover: oklch(0.26 0.030 156);
+  --popover-foreground: oklch(0.95 0.012 110);
+  --primary: oklch(0.72 0.060 124);
+  --primary-foreground: oklch(0.19 0.024 158);
+  --secondary: oklch(0.26 0.030 156);
+  --secondary-foreground: oklch(0.95 0.012 110);
+  --muted: oklch(0.26 0.030 156);
+  --muted-foreground: oklch(0.78 0.024 118);
+  --accent: oklch(0.72 0.060 124);
+  --accent-foreground: oklch(0.19 0.024 158);
+  --destructive: oklch(0.52 0.18 29);
+  --destructive-foreground: oklch(0.95 0.012 110);
+  --border: oklch(0.72 0.060 124 / 18%);
+  --input: oklch(0.72 0.060 124 / 24%);
+  --ring: oklch(0.72 0.060 124);
 }
 
 .dark {
